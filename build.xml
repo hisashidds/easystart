@@ -147,7 +147,7 @@
                 log="${cargo.log.dir}/cargo.log" 
                 action="start" 
                 id="${cargo.refid}">
-            <zipurlinstaller installurl="${cargo.container.installer.url}" extractDir="${app.servers}"/>
+            <zipurlinstaller installurl="${cargo.container.installer.url}"/>
             <configuration home="${cargo.config.dir}"> 
                 <property name="cargo.servlet.port" value="8080"/>
                 <property name="cargo.logging" value="high"/>
