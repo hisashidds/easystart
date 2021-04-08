@@ -9,7 +9,7 @@ RUN apk add --update \
     curl && \
     curl -o /var/tmp/ivy.zip https://downloads.apache.org/ant/ivy/2.5.0/apache-ivy-2.5.0-bin.zip && \
     unzip /var/tmp/ivy.zip -d /var/tmp && \
-    cp /var/tmp/apache-ivy-2.4.0/ivy-2.4.0.jar /usr/share/java/apache-ant/lib && \
+    cp /var/tmp/apache-ivy-2.5.0/ivy-2.5.0.jar /usr/share/java/apache-ant/lib && \
     rm -r /var/tmp \
     && rm -rf /var/cache/apk/*
 
