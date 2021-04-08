@@ -21,9 +21,9 @@
     <property name="cargo.config.dir" value="tmp/cargoconfig"/>
     
     <target name="with.tomcat">
-        <property name="cargo.container.id" value="tomcat5x" />
+        <property name="cargo.container.id" value="tomcat9x" />
         <property name="cargo.container.installer.url" 
-          value="http://www.apache.org/dist/tomcat/tomcat-5/v5.5.26/bin/apache-tomcat-5.5.26.zip"/>
+          value="https://downloads.apache.org/tomcat/tomcat-9/v9.0.45/bin/apache-tomcat-9.0.45.zip"/>
     </target>
     
     <target name="with.resin">
@@ -143,14 +143,11 @@
         <echo message="Starting Cargo..."/>
         <echo message="Using war = ${dist.dir}/${appName}.war "/>        
         <cargo  containerId="${cargo.container.id}" 
-                wait="false"
                 output="${cargo.log.dir}/output.log" 
                 log="${cargo.log.dir}/cargo.log" 
                 action="start" 
                 id="${cargo.refid}">
-            <zipurlinstaller installurl="${cargo.container.installer.url}"
-                installdir="${app.servers}"
-            />
+            <zipurlinstaller installurl="${cargo.container.installer.url}" extractDir="${app.servers}"/>
             <configuration home="${cargo.config.dir}"> 
                 <property name="cargo.servlet.port" value="8080"/>
                 <property name="cargo.logging" value="high"/>
