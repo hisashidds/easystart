@@ -25,7 +25,7 @@ pipeline {
             junit testResults: '**/TEST-*.xml'
 
             //recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
-            recordIssues enabledForFailure: true, tool: checkStyle()
+            recordIssues enabledForFailure: true, tools: checkStyle()
             //recordIssues enabledForFailure: true, tools: spotBugs()
         }
     }
