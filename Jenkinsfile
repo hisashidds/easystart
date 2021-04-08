@@ -1,13 +1,13 @@
 pipeline {
     agent {
-        docker 'hello-world'
+        docker 'openjdk:8u131-jdk'
     }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ant build'
+                sh 'java -version'
             }
         }
         stage('Test') {
