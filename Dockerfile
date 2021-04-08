@@ -5,7 +5,6 @@ RUN apk add --update \
     --allow-untrusted \
     bash \
     git \
-    g++ \
     zip \
     curl && \
     curl -o /var/tmp/ivy.zip https://www.apache.org/dist/ant/ivy/2.4.0/apache-ivy-2.4.0-bin.zip && \
