@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker 'openjdk:8u131-jdk'
-    }
+    agent { dockerfile true }
 
     stages {
         stage('Build') {
